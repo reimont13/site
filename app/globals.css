@@ -1,22 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  /* Fonts */
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Red */
+  --color-red-100: #ea5252;
+
+  /* Gray */
+  --color-gray-100: #F3F3F3;
+  --color-gray-200: #363636;
+  --color-gray-300: #707070;
+  --color-gray-400: #3A3A3A;
+  --color-gray-500: #808080;
+  --color-gray-600: #00000045;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
