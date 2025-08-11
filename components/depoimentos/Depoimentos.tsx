@@ -7,7 +7,8 @@ export function Depoimentos() {
                      lg:pt-22  lg:pb-24
                     2xl:px-30 
                     xl:px-22
-                    lg:px-16">
+                    lg:px-16
+                    mx-auto bg-gray-100 text-gray-200 font-poppins flex-shrink-0">
       <h1 className="2xl:text-[5.188rem]
                       xl:text-7xl 
                       lg:text-6xl 
