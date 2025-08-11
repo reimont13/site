@@ -47,11 +47,16 @@ export function Carrousel() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="font-poppins text-gray-200 px-32">
-      <div className="mx-auto flex items-center justify-center">
+    <section
+      className="2xl:px-26 
+                  xl:px-16
+                  lg:px-10
+                  font-poppins text-gray-200"
+    >
+      <div className="mx-auto flex items-center 2xl:gap-16 xl:gap-12 lg:gap-8 justify-center">
         <button
           onClick={goToPrevious}
-          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="rounded-full hover:bg-gray-100 transition-colors"
           aria-label="Depoimento anterior"
         >
           <ChevronLeft size={120} className="text-gray-300" strokeWidth={3} />
@@ -59,23 +64,62 @@ export function Carrousel() {
 
         <div key={currentTestimonial.id} className="w-full">
           <div className="flex items-center justify-center gap-11">
-            <Image
-              src={currentTestimonial.image || "/placeholder.svg"}
-              alt={currentTestimonial.author}
-              width={304}
-              height={304}
-              className="rounded-full max-w-[304px] flex-shrink-0 bg-amber-600"
-            />
+            <div
+              className="2xl:w-[19rem] 
+                          xl:w-[17rem] 
+                          lg:w-[15rem] 
+                          md:w-[13rem] 
+                          sm:w-[11rem] 
+                          rounded-full 
+                          overflow-hidden 
+                          flex-shrink-0 
+                          bg-amber-600 relative"
+            >
+              <Image
+                src={currentTestimonial.image}
+                alt={currentTestimonial.author}
+                width={528}
+                height={352}
+                style={{ objectFit: "cover" }}
+                className="rounded-full"
+                sizes="(max-width: 640px) 11rem,
+           (max-width: 768px) 13rem,
+           (max-width: 1024px) 15rem,
+           (max-width: 1280px) 17rem,
+           19rem"
+              />
+            </div>
 
-            <div className="flex flex-col text-left max-w-[52.063rem]">
-              <p className="text-4xl font-semibold leading-[3.125rem] mb-6 min-h-[20rem] flex-shrink-0">
+            <div className="flex flex-col 2xl:gap-7 xl:gap-6 lg:gap-5 md:gap-4 sm:gap3 text-left">
+              <p
+                className="2xl:text-3xl 
+                             xl:text-[2.063rem]
+                             lg:text-3xl 
+                            2xl:leading-[3.125rem]
+                             xl:leading-[2.875rem]
+                             lg:leading-[2.625rem]
+                            2xl:min-h-[20rem]
+                             xl:min-h-[18rem]
+                             lg:min-h-[16rem]
+                             font-semibold"
+              >
                 {currentTestimonial.text}
               </p>
               <div>
-                <h4 className="font-semibold text-4xl text-left">
+                <h4
+                  className="2xl:text-4xl 
+                                xl:text-3xl 
+                                lg:text-[1.688rem]
+                                font-semibold text-left"
+                >
                   {currentTestimonial.author}
                 </h4>
-                <p className="italic text-4xl text-left">
+                <p
+                  className="2xl:text-4xl 
+                               xl:text-3xl 
+                               lg:text-2xl 
+                               italic text-left"
+                >
                   {currentTestimonial.role}
                 </p>
               </div>
