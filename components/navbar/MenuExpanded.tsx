@@ -36,7 +36,14 @@ export function MenuExpanded() {
         }
         onClick={openMenu}
       >
-        <Menu color="white" size={75} strokeWidth={3} />
+        <Menu color="white" strokeWidth={3} className="
+            2xl:w-19 2xl:h-19 
+            xl:w-17 xl:h-17 
+            lg:w-15 lg:h-15 
+            md:w-14 md:h-14
+            sm:w-13 sm:h-13
+            xs:w-12 xs:h-12
+            w-12 h-12 pt-1 "/>
       </button>
 
       <Transition

@@ -48,28 +48,32 @@ export function Carrousel() {
 
   return (
     <section
-      className="2xl:px-26 
-                  xl:px-16
-                  lg:px-10
+      className="2xl:px-30 
+                  xl:px-22
+                  lg:px-18
+                  md:px-12
                   font-poppins text-gray-200"
     >
       <div className="mx-auto flex items-center 2xl:gap-16 xl:gap-12 lg:gap-8 justify-center">
         <button
           onClick={goToPrevious}
-          className="rounded-full hover:bg-gray-100 transition-colors"
+          className="rounded-full hover:bg-gray-100 transition-colors text-gray-300"
           aria-label="Depoimento anterior"
         >
-          <ChevronLeft size={120} className="text-gray-300" strokeWidth={3} />
+          <ChevronLeft className="
+            2xl:w-19 2xl:h-19 
+            xl:w-17 xl:h-17 
+            lg:w-15 h-15 
+            md:w-14 md:h-14" strokeWidth={3} />
         </button>
 
         <div key={currentTestimonial.id} className="w-full">
-          <div className="flex items-center justify-center gap-11">
+          <div className="flex items-center justify-center gap-11 2xl:ml-21 xl:ml-17 lg:ml-13 md:ml-9">
             <div
               className="2xl:w-[19rem] 
-                          xl:w-[17rem] 
-                          lg:w-[15rem] 
-                          md:w-[13rem] 
-                          sm:w-[11rem] 
+                          xl:w-[16rem] 
+                          lg:w-[14rem] 
+                          md:w-[12rem] 
                           rounded-full 
                           overflow-hidden 
                           flex-shrink-0 
@@ -78,29 +82,27 @@ export function Carrousel() {
               <Image
                 src={currentTestimonial.image}
                 alt={currentTestimonial.author}
-                width={528}
-                height={352}
+                width={304}
+                height={304}
                 style={{ objectFit: "cover" }}
                 className="rounded-full"
-                sizes="(max-width: 640px) 11rem,
-           (max-width: 768px) 13rem,
-           (max-width: 1024px) 15rem,
-           (max-width: 1280px) 17rem,
-           19rem"
               />
             </div>
 
-            <div className="flex flex-col 2xl:gap-7 xl:gap-6 lg:gap-5 md:gap-4 sm:gap3 text-left">
+            <div className="flex flex-col 2xl:gap-7 xl:gap-6 lg:gap-5 md:gap-4 text-left 2xl:mr-21 xl:mr-17 lg:mr-13 md:mr-9">
               <p
                 className="2xl:text-3xl 
                              xl:text-[2.063rem]
                              lg:text-3xl 
-                            2xl:leading-[3.125rem]
-                             xl:leading-[2.875rem]
-                             lg:leading-[2.625rem]
+                             md:text-2xl
+                            2xl:leading-[3.1rem]
+                             xl:leading-[2.7rem]
+                             lg:leading-[2.3rem]
+                             md:leading-[1.9rem]
                             2xl:min-h-[20rem]
                              xl:min-h-[18rem]
                              lg:min-h-[16rem]
+                             md:min-h-[14rem]
                              font-semibold"
               >
                 {currentTestimonial.text}
@@ -129,10 +131,14 @@ export function Carrousel() {
 
         <button
           onClick={goToNext}
-          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-full hover:bg-gray-100 transition-colors text-gray-300"
           aria-label="Próximo depoimento"
         >
-          <ChevronRight size={120} className="text-gray-300" strokeWidth={3} />
+          <ChevronRight className="
+            2xl:w-19 2xl:h-19 
+            xl:w-17 xl:h-17 
+            lg:w-15 h-15 
+            md:w-14 md:h-14" strokeWidth={3} />
         </button>
       </div>
     </section>

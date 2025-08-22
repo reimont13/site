@@ -30,7 +30,7 @@ body {
 @theme {
   --breakpoint-*: initial;
 
-  --breakpoint-xs: 40rem;
+  --breakpoint-xs: 32rem;
   --breakpoint-sm: 48rem;
   --breakpoint-md: 64rem;
   --breakpoint-lg: 80rem;
