@@ -30,7 +30,11 @@ export function NewsLetter() {
           lg:w-[28rem]
           md:w-[24rem]
           w-[20rem]              
-          2xl:absolute 2xl:bottom-0 2xl:left-6.5 
+          2xl:absolute 2xl:bottom-0 2xl:left-6.5
+          xl:absolute xl:bottom-0 xl:left-6.5 
+          lg:absolute lg:bottom-0 lg:left-6.5 
+          md:absolute md:bottom-0 md:left-6.5  
+          sm:absolute sm:bottom-0 sm:left-6.5
           z-10 "
         >
           <Image
